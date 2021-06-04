@@ -1,7 +1,5 @@
-from typing import AnyStr
-
-
 T = int(input())
+floor0 = [i for i in range(1, 15)]
 
 answer = []
 solve = 0
@@ -12,4 +10,4 @@ for i in range(0,T):
         solve += j
     answer.append(solve)
     solve = 0
-[print(a) for a in answer]
+[print(a) for a in answer] 
