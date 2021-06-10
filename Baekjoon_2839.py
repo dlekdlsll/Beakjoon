@@ -1,19 +1,14 @@
 N = int(input())
-answer = 0
+Kg5,Kg3 = 0,0
 
-if N % 5 > 1 and N//5 > 1 :
-    namergy = N%5
-    if namergy%3==0:
-        answer = (N//5 + namergy//3)
-elif N % 3 > 1 and N//3 > 1 :
-    namergy = N%3
-    if namergy%5==0:
-        answer = (N//3 + namergy//5)
-elif N % 3 == 0:
-    answer = N//3
-elif N % 3 == 2:
-    answer = ((N - 5)/3) + 1
-else:
-    answer = -1
-
-print(int(answer))
+while True:
+    if N < 5 and N!=3 :
+        Kg5= -1; Kg3= 0
+        break
+    if N%5!=0:
+        N -= 3; Kg3 += 1
+        if N == 0: break
+    if N%5==0:
+        N -= 5; Kg5 += 1
+        if N == 0: break
+print(Kg5+Kg3)
