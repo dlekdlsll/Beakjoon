@@ -12,10 +12,11 @@ for i in range(0,T):
         if d == 0:
             break
         d -= jump
+        times += 1
         distance = [jump-1,jump,jump+1]
-        if d in distance and max(distance) <= 3 and d > 0 and d!=3 :
-            times += 1
+        if d in distance and max(distance) <= 3 and d > 0:
             d -= d
+            times += 1
         jump = max(distance)
     case.append(times)
     
