@@ -1,11 +1,11 @@
 N = int(input())
-listinin = [int(x) for x in input().split()]; sosu = []
-for i in range(0,N): 
-    A = listinin[i]
-    if A!=1:
-        if A==2 | A%2!=0: sosu.append(A) 
-        elif A==3 | A%3!=0: sosu.append(A) 
-        elif A==5 | A%5!=0: sosu.append(A) 
-        elif A==7 | A%7!=0: sosu.append(A)
-        elif A==11 | A%11!=0: sosu.append(A)
-print(len(sosu))
+listinin = [int(x) for x in input().split()]
+
+prime = [False,False] + [True]*(1000-1)
+for i in range(2,len(prime)):
+    if prime[i] == True:
+        for j in range(i*2,len(prime),i):
+            prime[j] = False
+    
+printprime = [i for i in listinin if prime[i]==True]
+[print(len(printprime))]
