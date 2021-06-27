@@ -1,10 +1,8 @@
-answer = []
-
-for i in range(0,3):
-    A, B = map(int,input().split())
-    answer.append(A); answer.append(B)
-
-for i in answer: 
-    if answer.count(i)==2: k = i
-
-print(k,k)
+X, Y = [],[]
+for _ in range(3):
+    x, y = map(int, input().split())
+    X.append(x); Y.append(y)
+for i in range(3):
+    if X.count(X[i]) == 1: x2 = X[i]
+    if Y.count(Y[i]) == 1: y2 = Y[i]
+print(x2, y2)
