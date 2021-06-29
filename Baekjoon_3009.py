@@ -1,5 +1,5 @@
 X, Y = [],[]
-for _ in range(3):    # 3번 반복합니다 # 진짜 푸쉬 되는건가 이제?
+for _ in range(3):    # 3번 반복합니다
     x, y = map(int, input().split())
     X.append(x); Y.append(y)
 for i in range(3):
